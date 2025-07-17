@@ -1,0 +1,58 @@
+{
+  "name": "farsight-rpg-beacon-sdk",
+  "version": "1.0.0",
+  "description": "Farsight RPG Roll20 Sheet using Beacon SDK",
+  "main": "index.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "sandbox-server": "vite --port 7620 --mode staging",
+    "sandbox": "run-s build-scss sandbox-server",
+    "build": "run-s build-scss && vite build",
+    "build-scss": "sass ./src/rollTemplates/host.scss ./public/host.css --no-source-map --no-charset",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "format": "prettier --write src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vincenzov01/Farsight-RPG-Beacon-SDK.git"
+  },
+  "keywords": [
+    "farsight",
+    "roll20",
+    "sheet",
+    "rpg",
+    "roleplay",
+    "game"
+  ],
+  "author": "Vincenzo Aucello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vincenzov01/Farsight-RPG-Beacon-SDK/issues"
+  },
+  "homepage": "https://github.com/vincenzov01/Farsight-RPG-Beacon-SDK#readme",
+  "dependencies": {
+    "@roll20-official/beacon-sdk": "^0.0.37",
+    "handlebars": "^4.7.8",
+    "jsonpath": "^1.1.1",
+    "lodash": "^4.17.21",
+    "pinia": "^3.0.3",
+    "uuid": "^11.1.0",
+    "vue": "^3.5.17"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.12.0",
+    "@vitejs/plugin-vue": "^6.0.0",
+    "@vitejs/plugin-vue-jsx": "^5.0.1",
+    "@vue/eslint-config-prettier": "^10.2.0",
+    "eslint": "^9.31.0",
+    "eslint-plugin-vue": "^10.3.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.6.2",
+    "sass": "^1.89.2",
+    "vite": "^7.0.4",
+    "vite-plugin-vue-devtools": "^7.7.7"
+  }
+}
