@@ -24,10 +24,6 @@ const sheet = useSheetStore()
         <span class="label">Character Name</span>
       </label>
       <input id="character_name" v-model="meta.name" />
-      <label for="faction">
-        <span class="label">Faction</span>
-      </label>
-      <input id="faction" v-model="sheet.faction" />
     </div>
     <div class="card">
       <div class="subheader">

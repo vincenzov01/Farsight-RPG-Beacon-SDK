@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from 'uuid'
 import { arrayToObject, objectToArray } from '@/utility/objectify'
 import { dispatchRef, initValues } from '@/relay/relay.js'
 import { createRollTemplate } from '@/rollTemplates/index.js'
+import { abilitiesMap } from './abilitiesMap.js'
+
 
 /*
 This function will leverage the beacon SDK to render a roll template to the chat log.
@@ -58,27 +60,27 @@ trait objects, that feature a name and description.
 This is a great starting place to customize what data you need for your sheet.
  */
 const sheetStore = () => {
-  const faction = ref('')
   const traits = ref([])
   const traitsCount = computed(() => traits.value?.length)
+  const abilities = ref([abilitiesMap])
 
   // Handles retrieving these values from the store
   const dehydrate = () => {
     return {
-      faction: faction.value,
-      traits: arrayToObject(traits.value)
+      traits: arrayToObject(traits.value),
+      abilities: abilities.value
     }
   }
   // Handles updating these values in the store.
   const hydrate = (hydrateStore) => {
-    faction.value = hydrateStore.faction ?? faction.value
     traits.value = objectToArray(hydrateStore.traits) || traits.value
+    abilities.value = data.abilities ?? abilities.value
   }
 
   return {
-    faction,
     traits,
     traitsCount,
+    abilities,
     addTrait: () => addTrait(traits),
     removeTrait: (traitId) => removeTrait(traits, traitId),
     postTraitToChat,

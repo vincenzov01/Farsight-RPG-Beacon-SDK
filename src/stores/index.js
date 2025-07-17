@@ -6,10 +6,8 @@ import { useSheetStore } from '@/stores/sheetStore.js'
 
 // Here you can set all default values for your sheet.
 // This is your blank slate, new character setup.
-export const DEFAULT_CHARACTER_NAME = 'My Hero'
-export const DEFAULT_AVATAR_URL =
-  'https://s3.amazonaws.com/files.d20.io/images/388362206/5R6pOnpvGrIRL2L0ImU-uA/original.png'
-export const DEFAULT_FACTION = 'The Guild of Awesome'
+export const DEFAULT_CHARACTER_NAME = ''
+export const DEFAULT_AVATAR_URL = ''
 
 /*
  * This is the master store for the entire character sheet.
@@ -91,7 +89,6 @@ export const useAppStore = defineStore('app', () => {
   const loadExampleData = () => {
     stores.meta.name = DEFAULT_CHARACTER_NAME
     stores.meta.avatar = DEFAULT_AVATAR_URL
-    stores.sheet.faction = DEFAULT_FACTION
     stores.sheet.traits = []
   }
 

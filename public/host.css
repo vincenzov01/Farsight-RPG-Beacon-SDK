@@ -1,17 +1,17 @@
-.quickstart-template {
+.template {
   display: block;
   max-width: 100%;
   background-color: white;
   color: black;
   border-radius: 0.25rem;
 }
-.quickstart-template__trait {
+.template__trait {
   display: grid;
   grid-template-columns: auto;
   gap: 0.5rem;
   padding: 1rem;
 }
-.quickstart-template__trait__name {
+.template__trait__name {
   font-weight: 600;
   text-transform: uppercase;
 }
