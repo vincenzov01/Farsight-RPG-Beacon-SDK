@@ -1,11 +1,15 @@
 {
-  "advanced": true,
-  "authors": "Vincenzo Aucello",
-  "roll20userid": "1376005",
-  "preview": "",
-  "compendium": "",
-  "useroptions": [],
-  "instructions": "Quickstart Beacon Sheet",
-  "legacy": false,
-  "tags": ""
+	"advanced": true,
+	"authors": "Vincenzo Aucello",
+	"roll20userid": "1376005",
+	"preview": "",
+	"compendium": "",
+	"useroptions": [
+
+	],
+	"instructions": "Farsight RPG Beacon Community Sheet",
+	"legacy": false,
+	"tags": "",
+	"tipee": "https://it.tipeee.com/vincenzoaucello/",
+	"advancedPort": 7620
 }

@@ -2,6 +2,7 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import { createRelay } from './relay/relay'
+import PrimeVue from "primevue/config";
 import App from './App.vue'
 
 /*
@@ -32,9 +33,11 @@ const { relayPinia, relayVue } = await createRelay({
   devMode: isDevEnvironment
 })
 
+
 app.use(pinia)
 app.use(relayVue)
 pinia.use(relayPinia)
+app.use(PrimeVue);
 
 // Mounts the vue app to this div in the DOM
 app.mount('#app')
